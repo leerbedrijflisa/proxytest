@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.ProxyTest.Api", "Lisa.ProxyTest.Api\Lisa.ProxyTest.Api.csproj", "{94B268F1-5B7F-4C52-AFC4-11D07BC577D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.ProxyTest.Console", "Lisa.ProxyTest.Console\Lisa.ProxyTest.Console.csproj", "{B0A28D85-8DBF-4D91-8326-A75D012A04EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94B268F1-5B7F-4C52-AFC4-11D07BC577D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B268F1-5B7F-4C52-AFC4-11D07BC577D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B268F1-5B7F-4C52-AFC4-11D07BC577D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B268F1-5B7F-4C52-AFC4-11D07BC577D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A28D85-8DBF-4D91-8326-A75D012A04EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A28D85-8DBF-4D91-8326-A75D012A04EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A28D85-8DBF-4D91-8326-A75D012A04EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A28D85-8DBF-4D91-8326-A75D012A04EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
