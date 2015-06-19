@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d53cc80b-66a4-4df0-9c85-afa395a1e393</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Lisa.ProxyTest.TransferModels</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Gpu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manufacturer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Memory.cs" />
+  </ItemGroup>
+</Project>
