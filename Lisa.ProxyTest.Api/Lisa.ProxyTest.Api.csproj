@@ -89,7 +89,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Gpu\GetOne.cs" />
     <Compile Include="Controllers\GpuController.cs" />
+    <Compile Include="Controllers\Gpu\Delete.cs" />
+    <Compile Include="Controllers\Gpu\GetAll.cs" />
+    <Compile Include="Controllers\Gpu\Post.cs" />
     <Compile Include="Data\ApiContext.cs" />
     <Compile Include="Data\DataModelFactory.cs" />
     <Compile Include="DataModels\GpuData.cs" />

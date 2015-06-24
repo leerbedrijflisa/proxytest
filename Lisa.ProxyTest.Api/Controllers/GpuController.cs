@@ -10,21 +10,8 @@ using Lisa.ProxyTest.Api.DataModels;
 
 namespace Lisa.ProxyTest.Api.Controllers
 {
-    public class GpuController : ApiController
+    public partial class GpuController : ApiController
     {
-
-
-        public IHttpActionResult Get()
-        {
-            var gpuDatas = _apiContext.GpuDatas;
-            return Ok(_dataModelFactory.Create(gpuDatas));
-        }
-
-        public IHttpActionResult Get(int id)
-        {
-            return Ok();
-        }
-
         private DataModelFactory _dataModelFactory = new DataModelFactory();
         private ApiContext _apiContext = new ApiContext();
     }
