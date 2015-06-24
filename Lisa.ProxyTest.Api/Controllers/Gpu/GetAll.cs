@@ -47,6 +47,13 @@ namespace Lisa.ProxyTest.Api.Controllers
         }
 
         [HttpGet]
+        [Route("401/gpu")]
+        public IHttpActionResult GetUnauthorized()
+        {
+            return Unauthorized();
+        }
+
+        [HttpGet]
         [Route("500/gpu")]
         public IHttpActionResult GetInternalServerError()
         {
