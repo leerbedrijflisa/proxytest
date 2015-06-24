@@ -38,7 +38,14 @@ namespace Lisa.ProxyTest.Api.Controllers
             response.Headers.Location = new Uri(Uri + "/200/gpu");
             return response;
         }
-        
+
+        [HttpGet]
+        [Route("400/gpu")]
+        public IHttpActionResult GetBadRequest()
+        {
+            return BadRequest();
+        }
+
         [HttpGet]
         [Route("500/gpu")]
         public IHttpActionResult GetInternalServerError()
