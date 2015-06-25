@@ -54,6 +54,13 @@ namespace Lisa.ProxyTest.Api.Controllers
         }
 
         [HttpGet]
+        [Route("403/gpu")]
+        public HttpResponseMessage GetForbidden()
+        {
+            return this.Request.CreateErrorResponse(HttpStatusCode.Forbidden, "This method is not allowed!");
+        }
+
+        [HttpGet]
         [Route("500/gpu")]
         public IHttpActionResult GetInternalServerError()
         {
