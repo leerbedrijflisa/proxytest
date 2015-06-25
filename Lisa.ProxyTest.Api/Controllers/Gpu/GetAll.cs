@@ -68,6 +68,13 @@ namespace Lisa.ProxyTest.Api.Controllers
         }
 
         [HttpGet]
+        [Route("410/gpu")]
+        public HttpResponseMessage GetGone()
+        {
+            return this.Request.CreateErrorResponse(HttpStatusCode.Gone, "This resourse is no longer available!");
+        }
+
+        [HttpGet]
         [Route("500/gpu")]
         public IHttpActionResult GetInternalServerError()
         {
