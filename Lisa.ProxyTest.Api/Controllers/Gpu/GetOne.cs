@@ -8,7 +8,9 @@ namespace Lisa.ProxyTest.Api.Controllers
 {
     public partial class GpuController
     {
-        public IHttpActionResult Get(int id)
+        [HttpGet]
+        [Route("200/gpu/{id}")]
+        public IHttpActionResult GetOk(int id)
         {
             var gpuData = _apiContext.GpuDatas.Find(id);
             if (gpuData == null)

@@ -57,7 +57,7 @@ namespace Lisa.ProxyTest.Api.Controllers
         [Route("403/gpu")]
         public HttpResponseMessage GetForbidden()
         {
-            return this.Request.CreateErrorResponse(HttpStatusCode.Forbidden, "This method is not allowed!");
+            return Request.CreateErrorResponse(HttpStatusCode.Forbidden, "This method is not allowed!");
         }
 
         [HttpGet]
@@ -71,7 +71,7 @@ namespace Lisa.ProxyTest.Api.Controllers
         [Route("410/gpu")]
         public HttpResponseMessage GetGone()
         {
-            return this.Request.CreateErrorResponse(HttpStatusCode.Gone, "This resourse is no longer available!");
+            return Request.CreateErrorResponse(HttpStatusCode.Gone, "This resourse is no longer available!");
         }
 
         [HttpGet]
