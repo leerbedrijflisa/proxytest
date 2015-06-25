@@ -61,6 +61,13 @@ namespace Lisa.ProxyTest.Api.Controllers
         }
 
         [HttpGet]
+        [Route("404/gpu")]
+        public IHttpActionResult GetNotFound()
+        {
+            return NotFound();
+        }
+
+        [HttpGet]
         [Route("500/gpu")]
         public IHttpActionResult GetInternalServerError()
         {
