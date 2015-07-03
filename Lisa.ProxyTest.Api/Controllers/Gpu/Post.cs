@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Http;
+using System.Net.Http;
 
 namespace Lisa.ProxyTest.Api.Controllers
 {
@@ -32,13 +34,7 @@ namespace Lisa.ProxyTest.Api.Controllers
         {
             var Uri = Request.RequestUri.Authority;
 
-            foreach(var memory in gpu.Memories)
-            {
-                _apiContext.MemoryDatas.Add(new MemoryData
-                {
-                    Size = memory.Size
-                });
-            }
+            var savedMemory = _apiContext.MemoryDatas.Find(gpu.Memories);
 
             _apiContext.ManufacturerDatas.Add(new ManufacturerData
             {
@@ -54,9 +50,24 @@ namespace Lisa.ProxyTest.Api.Controllers
                 PciVersion = gpu.PciVersion
             });
 
+            foreach (var memory in gpu.Memories)
+            {
+                _apiContext.MemoryDatas.Add(new MemoryData
+                {
+                    Size = memory.Size
+                });
+            }
+
             _apiContext.SaveChanges();
 
             return Created(Uri, gpu);
+        }
+
+        [HttpPost]
+        [Route("202/gpu")]
+        public HttpResponseMessage GetAccepted(GpuData gpu)
+        {
+            return Request.CreateErrorResponse(HttpStatusCode.Accepted, "");
         }
     }
 }
